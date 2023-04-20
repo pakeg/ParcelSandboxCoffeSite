@@ -26,3 +26,23 @@ window.onscroll = () => {
   cartItemsContainer.classList.remove("active");
   searchForm.classList.remove("active");
 };
+
+navbar.onmouseenter = () => {
+  const div = document.createElement("div");
+  div.style.position = "absolute";
+  div.style.height = "2px";
+  div.style.backgroundColor = "#d3ad7f";
+  navbar.append(div);
+
+  navbar.onmousemove = (e) => {
+    if (e.target === e.currentTarget) {
+      return;
+    }
+    div.style.width = e.target.offsetWidth + "px";
+    div.style.left = e.target.offsetLeft + "px";
+  };
+
+  navbar.onmouseleave = (e) => {
+    div.remove();
+  };
+};
