@@ -67,15 +67,13 @@ body {
 .header .logo img {
   height: 6rem;
 }
+.header .navbar {
+  position: relative;
+}
 .header .navbar a {
   margin: 0 1rem;
   font-size: 1.6rem;
   color: #fff;
-}
-.header .navbar a:hover {
-  color: var(--main-color);
-  border-bottom: 0.1rem solid var(--main-color);
-  padding-bottom: 0.5rem;
 }
 .header .icons {
   display: flex;
